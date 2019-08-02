@@ -1,0 +1,11 @@
+{
+  "name": "node-mongo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Zzeris/node-mongo.git",
+  "author": "zzeris <zzeris@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
