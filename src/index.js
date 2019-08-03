@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -11,8 +12,8 @@ mongoose.connect('mongodb+srv://github:github@cluster0-em4dj.mongodb.net/test?re
     console.log(`Não conectado! Error: ${err}`);
 });
 
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
+app.use(bodyParser.json());
+
+app.use(require('./routes'));
 
 app.listen(3333);
